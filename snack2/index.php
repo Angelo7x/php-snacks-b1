@@ -4,6 +4,7 @@ che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocci
 
 
 <?php
+
 $name = $_GET["name"];
 $mail = $_GET["mail"];
 $age = $_GET["age"];
@@ -15,5 +16,25 @@ if (strlen($name) > 3 && (strpos($mail, "@") && strpos($mail, ".") ) && (is_nume
 } else {
     
     echo "Accesso negato";
-}
+};
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snack2</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="name" placeholder="Inserisci il tuo nome">
+        <input type="email" name="mail" placeholder="Inserisci la tua mail">
+        <input type="text" name="age" placeholder="Inserisci la tua età">
+        <button type="submit">Invia</button>
+    </form>
+</body>
+</html>
 
